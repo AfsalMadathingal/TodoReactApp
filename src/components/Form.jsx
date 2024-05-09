@@ -15,6 +15,11 @@ export default function Form({ todos, setTodos }) {
         toast.error("Already Exist");
         return
     }
+    if(!todo.name) {
+
+        toast.error("Enter Todo");
+        return
+    }
     setTodos([...todos, todo]);
     setTodo({ name: "", done: false });
 

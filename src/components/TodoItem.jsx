@@ -11,22 +11,19 @@ export default function TodoItem(props) {
       dangerMode: true,
     }).then((willDelete) => {
       if (willDelete) {
-
         props.setTodos(props.todos.filter((todo) => todo.name !== item));
-        toast.error("Deleted")
+        toast.error("Deleted");
       }
-      
-    })
-   
+    });
   }
 
   function handleComplet(item) {
-    
-
-    props.setTodos(props.todos.map((todo) => {
-      return todo.name === item ? { ...todo, done: !todo.done } : todo;
-    }));
-    toast.success("Done")
+    props.setTodos(
+      props.todos.map((todo) => {
+        return todo.name === item ? { ...todo, done: !todo.done } : todo;
+      })
+    );
+    toast.success("Done");
   }
 
   const className = props.item.done ? styles.taskCompleted : "";
