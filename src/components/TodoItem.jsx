@@ -3,8 +3,21 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 export default function TodoItem(props) {
   function handleDelete(item) {
-    props.setTodos(props.todos.filter((todo) => todo.name !== item));
-    toast.error("Deleted")
+    swal({
+      title: "Are you sure?",
+      text: "Once deleted, you will not be able to recover this item!",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    }).then((willDelete) => {
+      if (willDelete) {
+
+        props.setTodos(props.todos.filter((todo) => todo.name !== item));
+        toast.error("Deleted")
+      }
+      
+    })
+   
   }
 
   function handleComplet(item) {

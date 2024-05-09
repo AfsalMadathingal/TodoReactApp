@@ -3,9 +3,9 @@
 body
 {
 
-    background-image: url(https://wallpapercave.com/wp/wp9983504.jpg);
-    backdrop-filter: blur(5px);
-    height: 100vh;
+   
+    background: rgb(56,60,82);
+    background: radial-gradient(circle, rgba(56,60,82,1) 0%, rgba(2,5,24,1) 48%, rgba(3,2,2,1) 100%);
     margin: 0;
     font-family: "Josefin Sans", sans-serif;
 }

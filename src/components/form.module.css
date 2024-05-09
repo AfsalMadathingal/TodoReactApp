@@ -49,3 +49,16 @@
     display: flex;
     
 }
+
+@media screen and (max-width: 500px) {
+
+    .inputContainer{
+        width: 300px;
+
+    }
+
+    .todoform{
+        width: 300px;
+    }
+    
+}

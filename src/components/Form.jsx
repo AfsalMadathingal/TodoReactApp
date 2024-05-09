@@ -9,10 +9,16 @@ export default function Form({ todos, setTodos }) {
   function handleSubmit(e) {
     e.preventDefault();
 
+    const validation = todos.some((item) => item.name === todo.name);
+    if(validation) {
+
+        toast.error("Already Exist");
+        return
+    }
     setTodos([...todos, todo]);
     setTodo({ name: "", done: false });
 
-    toast.success("Todo Added");
+    toast.success("Todo Added", { autoClose: 2000 });
   }
 
   return (

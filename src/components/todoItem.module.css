@@ -51,3 +51,12 @@
 .taskCompleted{
     text-decoration: line-through;
 }
+
+
+@media screen and (max-width: 500px) {
+
+    .item{
+        width: 300px;
+    }
+    
+}

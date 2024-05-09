@@ -2,13 +2,14 @@ import TodoItem from "./TodoItem";
 
 export default function TodoList({todos,setTodos}) {
 
-  console.log(todos);
+  const sortedTodos= todos.slice().sort((a,b)=>Number(a.done)-Number(b.done))
+
   return (
 
 
     <div>
 
-      {todos.map((item) => (
+      {sortedTodos.map((item) => (
         <TodoItem  key={item.name} item={item} todos={todos} setTodos={setTodos} />
       ))}
 
