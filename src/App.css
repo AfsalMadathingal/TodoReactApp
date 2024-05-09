@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Pacifico&display=swap');
+
+body
+{
+
+    background-image: url(https://wallpapercave.com/wp/wp9983504.jpg);
+    backdrop-filter: blur(5px);
+    height: 100vh;
+    margin: 0;
+    font-family: "Josefin Sans", sans-serif;
+}
+
