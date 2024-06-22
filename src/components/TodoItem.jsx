@@ -1,7 +1,12 @@
 import styles from "./todoItem.module.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
+
 export default function TodoItem(props) {
+
+
+
   function handleDelete(item) {
     swal({
       title: "Are you sure?",
@@ -17,7 +22,10 @@ export default function TodoItem(props) {
     });
   }
 
+
+
   function handleComplet(item) {
+    
     props.setTodos(
       props.todos.map((todo) => {
         return todo.name === item ? { ...todo, done: !todo.done } : todo;
@@ -39,7 +47,7 @@ export default function TodoItem(props) {
             className={styles.completed}
           >
             {" "}
-            Mark as Completed <i className="fa-solid fa-circle-check"></i>{" "}
+            {props.item.done ? "Mark As Not Completed":"Mark As Completed"} <i className="fa-solid fa-circle-check"></i>{" "}
           </button>
           <button
             onClick={() => {

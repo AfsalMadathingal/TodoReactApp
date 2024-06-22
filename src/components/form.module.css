@@ -43,6 +43,23 @@
     font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
+ 
+}
+
+.hidButtoin{
+    
+    border-radius: 4px;
+    border:10px;
+    background-color: rgb(11, 17, 105);
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-weight: 200;
+    font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+    margin:  20px;
 }
 
 .inputContainer{
@@ -61,4 +78,10 @@
         width: 300px;
     }
     
+}
+
+.mainDiv{
+
+    display: flex;
+    justify-content: center;
 }

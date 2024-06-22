@@ -10,17 +10,16 @@ export default function Form({ todos, setTodos }) {
     e.preventDefault();
 
     const validation = todos.some((item) => item.name === todo.name);
-    if(validation) {
 
-        toast.error("Already Exist");
-        return
+    if (validation) {
+      toast.error("Already Exist");
+      return;
     }
-    if(!todo.name) {
-
-        toast.error("Enter Todo");
-        return
+    if (!todo.name) {
+      toast.error("Todo List cannot be empty");
+      return;
     }
-    setTodos([...todos, todo]);
+    setTodos([todo,...todos]);
     setTodo({ name: "", done: false });
 
     toast.success("Todo Added", { autoClose: 2000 });
